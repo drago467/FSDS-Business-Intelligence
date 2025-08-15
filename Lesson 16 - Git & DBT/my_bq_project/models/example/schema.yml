@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Staging cleaned orders"
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+  - name: fct_completed_orders
+    description: "Fact table for completed orders"
+    columns:
+      - name: order_id
+        tests:
+          - not_null

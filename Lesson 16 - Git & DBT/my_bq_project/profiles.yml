@@ -1,0 +1,25 @@
+my_bq_project:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: fsds-bi
+      dataset: analytics    # Dataset sẽ chứa các bảng dbt tạo ra
+      keyfile: /Users/nguyentienhuy/Documents/fsds/BI/material/Lesson 15 - Python 3/fsds-bi-96a792b2baf8.json
+      threads: 4
+      timeout_seconds: 300
+      location: US  # Tùy vùng của bạn
+
+  # marketing_project:
+  # target: dev
+  # outputs:
+  #   dev:
+  #     type: bigquery
+  #     method: service-account
+  #     project: fsds-bi
+  #     dataset: marketing_analytics    # Dataset mới cho project marketing
+  #     keyfile: /Users/nguyentienhuy/Documents/fsds/BI/material/Lesson 15 - Python 3/fsds-bi-96a792b2baf8.json
+  #     threads: 4
+  #     timeout_seconds: 300
+  #     location: US

@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: sample_datawarehouse   # <-- Tên tuỳ bạn đặt (alias name)
+    database: fsds-bi            # <-- Project ID trong BigQuery
+    schema: sample_datawarehouse # <-- Dataset trong BigQuery
+    tables:
+      - name: DimCustomer
+      - name: FactInternetSales
